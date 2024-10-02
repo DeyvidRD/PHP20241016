@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(66, 66, 66);
+    justify-content: center;
+    align-items:center;
+}
+
+.cadastro{    
+    width: 200px;
+    height: 180px;
+    padding: 10px;
+    font-size: 20px;
+    margin: solid 1px black;
+    background-color: rgb(8, 201, 201);
+}
+

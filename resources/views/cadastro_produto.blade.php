@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Criar produto</title>
+    <link rel="stylesheet" href="/css/tudo.css">
 </head>
 <body>
-    <form action="/criar_produto" method="post">
+    <form class="cadastro" action="/criar_produto" method="post">
         @csrf
         <label for="nome">Nome</label>
         <input type="text" name="nome">
