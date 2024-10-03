@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
-namespace App\Http\Controllers;
 use App\Models\Cliente;
 use Illuminate\Http\Request;
 
@@ -14,7 +12,6 @@ class ClienteController extends Controller
     
     public function criarCliente(Request $request){
         $clientes = new Cliente;
-
         $clientes->name = $request->name;
         $clientes->email = $request->email;
         $clientes->cpf = $request->cpf;
@@ -27,5 +24,27 @@ class ClienteController extends Controller
         $clientes = Cliente::all();
 
         return view("cliente", ["clientes"=>$clientes]);
+    }
+
+    public function deletar($id){
+        $cliente = new cliente;
+        $cliente->find($id)->delete();
+        return redirect('/listar_cliente');
+    }
+
+    public function formEditarCliente($id) {
+        $cliente = Cliente::find($id);
+
+        return view('editar_cliente', ["cliente" => $cliente]);
+    }
+
+    public function editar(Request $request) {
+        User::where('id', $request->id)->update([
+            'name' => $request->name,
+            'cpf' => $request->cpf,
+            'email  ' => $request->email,
+        ]);
+
+        return redirect('/listar_cliente');
     }
 }
