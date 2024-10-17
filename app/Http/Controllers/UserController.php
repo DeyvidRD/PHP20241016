@@ -16,11 +16,11 @@ class UserController extends Controller
         return redirect('/listar_usuarios');
     }
 
-    public function listar() {
+    /*public function listar() {
         $users = User::all();
 
         return view("users", ["users"=>$users]);
-    }
+    }*/
 
     public function formCriarUsuario() {
         return view("cadastro_usuario");
@@ -47,4 +47,13 @@ class UserController extends Controller
 
         return redirect('/listar_usuarios');
     }
+
+    public function listar() {
+        $users = User::all();
+
+        return view("users", ["users" => $users]);    
+    }
+    
+
+
 }

@@ -39,10 +39,10 @@ class VendedorController extends Controller
     }
 
     public function editar(Request $request) {
-        User::where('id', $request->id)->update([
+        Vendedor      ::where('id', $request->id)->update([
             'name' => $request->name,
             'matricula' => $request->matricula,
-            'comissao  ' => $request->comissao,
+            'comissao' => $request->comissao,
         ]);
 
         return redirect('/listar_vendedor');

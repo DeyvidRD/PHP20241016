@@ -39,10 +39,10 @@ class ProdutoController extends Controller
     }
 
     public function editar(Request $request) {
-        User::where('id', $request->id)->update([
+        Produto::where('id', $request->id)->update([
             'name' => $request->name,
             'descricao' => $request->descricao,
-            'preco  ' => $request->preco,
+            'preco' => $request->preco,
         ]);
 
         return redirect('/listar_produtos');

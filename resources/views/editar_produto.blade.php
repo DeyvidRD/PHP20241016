@@ -8,15 +8,15 @@
 <body>
 <form class="cadastro" action="/editar_produto/{{$produto->id}}" method="post">
         @csrf
-        {{method_field("PATCH")}}
+        {{method_field("PUT")}}
         <label for="name">Nome</label>
-        <input type="text" name="name" value="{{$produto->name}}>
+        <input type="text" name="name" value="{{$produto->name}}">
 
         <label for="descricao">Descrição</label>
-        <input type="text" name="descricao" value="{{$produto->descricao}}>
+        <input type="text" name="descricao" value="{{$produto->descricao}}">
 
         <label for="preco">Preço</label>
-        <input type="text" name="preco" value="{{$produto->preco}}>
+        <input type="text" name="preco" value="{{$produto->preco}}">
 
         <input type="submit" value="Salvar">
     </form>

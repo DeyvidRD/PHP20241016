@@ -21,8 +21,11 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
 }
 
-label {
-    color: white;
-    display: block; 
-    margin-bottom: 5px; 
+a {
+    display: block;
+    text-decoration: none; 
+    color: #007BFF; 
+    font-weight: bold; 
+    margin: 5px 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease; 
 }

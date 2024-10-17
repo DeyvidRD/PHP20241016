@@ -39,10 +39,10 @@ class ClienteController extends Controller
     }
 
     public function editar(Request $request) {
-        User::where('id', $request->id)->update([
+        Cliente::where('id', $request->id)->update([
             'name' => $request->name,
             'cpf' => $request->cpf,
-            'email  ' => $request->email,
+            'email' => $request->email,
         ]);
 
         return redirect('/listar_cliente');
